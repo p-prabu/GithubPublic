@@ -171,7 +171,7 @@ $global:selectProperties = @(
     @{Name='Password Not Required'; Expression={$_.PasswordNotRequired}}, 
     @{Name='Telephone Number'; Expression={$_.TelephoneNumber}}, 
     @{Name='Username'; Expression={$_.SamAccountName}}, 
-    @{Name='Username (pre 2000)'; Expression={$_.userPrincipalName}}, 
+    @{Name='UserPrincipalName'; Expression={$_.userPrincipalName}}, 
     @{Name='distinguishedName'; Expression={($_.distinguishedName -replace '^CN=[^,]+,', '')}}, 
     @{Name='MemberOf'; Expression={($_.MemberOf -replace '^CN=([^,]+),.*$', '$1') -join ','}}
 )
