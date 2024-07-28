@@ -185,5 +185,5 @@ function Get-ADDomainAllUsers {
 }
 
 # Export all users in the domain
-Get-ADDomainAllUsers
+Get-ADDomainAllUsers | Export-csv  Allusers.csv
 ```
