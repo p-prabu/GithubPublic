@@ -1,5 +1,5 @@
 
-# Get-ADDomainAllOUs.ps1 Script Explanation
+# Get-ADDomainOUs.ps1 Script Explanation
 
 ## Overview
 
