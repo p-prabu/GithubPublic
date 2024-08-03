@@ -1,5 +1,5 @@
 
-# Get-ADDomainOU.ps1 Script Explanation
+# Get-ADDomainAllOUs.ps1 Script Explanation
 
 ## Overview
 
@@ -188,17 +188,17 @@ Write-Host "Export completed. The list of OUs has been saved to $outputPath"
 
 1. **Retrieve only direct sub-organizational units:**
    ```powershell
-   Get-ADDomainOU -Filter "OU=TestLab.Local,DC=TestLab,DC=Local" -OneLevel
+   Get-ADDomainOU -Filter "OU=TestLab,DC=TestLab,DC=Local" -OneLevel
    ```
 
 2. **Retrieve all sub-organizational units:**
    ```powershell
-   Get-ADDomainOU -Filter "OU=TestLab.Local,DC=TestLab,DC=Local" -AllSubOU
+   Get-ADDomainOU -Filter "OU=TestLab,DC=TestLab,DC=Local" -AllSubOU
    ```
 
-3. **Retrieve OUs created in the last 30 days and modified in the last 15 days:**
+3. **Retrieve OUs created in the last 30 days:**
    ```powershell
-   Get-ADDomainOU -Created 30 -Modified 15 -Domain
+   Get-ADDomainOU -Created 30 -Domain
    ```
    
 4. **Retrieve OUs modified in the last 15 days:**
@@ -209,4 +209,9 @@ Write-Host "Export completed. The list of OUs has been saved to $outputPath"
 5. **Retrieve all empty OUs in the domain:**
    ```powershell
    Get-ADDomainOU -Domain -Empty
+   ```
+
+6. **Retrieve all OUs in the domain:**
+   ```powershell
+   Get-ADDomainOU -Domain
    ```

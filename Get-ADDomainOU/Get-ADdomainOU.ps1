@@ -39,10 +39,16 @@
     Get-ADDomainOU -Filter "OU=TestLab,DC=xyz,DC=domain,DC=net" -AllSubOU
 
 .EXAMPLE
-    Get-ADDomainOU -Created 30 -Modified 15 -Domain
+    Get-ADDomainOU -Created 30 -Domain
+
+.EXAMPLE
+    Get-ADDomain -Modified 15 -Domain
 
 .EXAMPLE
     Get-ADDomainOU -Domain -Empty
+
+.EXAMPLE
+    Get-ADDomainOU -Domain
 #>
 
 # Define the Get-ADDomainOU function
@@ -163,8 +169,9 @@ function Get-ADDomainOU {
 }
 
 # Example usage
-# Get-ADDomainOU -Filter "OU=TestLab.Local,DC=TestLab,DC=Local" -OneLevel
+# Get-ADDomainOU -Filter "OU=TestLab,DC=TestLab,DC=Local" -OneLevel
 # Get-ADDomainOU -Filter "OU=TestLab,DC=TestLab,DC=Local" -AllSubOU
 # Get-ADDomainOU -Created 30 -Domain
 # Get-ADDomainOU -Modified 15 -Domain
 # Get-ADDomainOU -Domain -Empty
+# Get-ADDomainOU -Domain
